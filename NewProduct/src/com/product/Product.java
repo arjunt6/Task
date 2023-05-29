@@ -54,7 +54,8 @@ public class Product {
 
         double giftWrapFeePerUnit = 1.0;
         int itemsPerPackage = 10;
-        double shippingFeePerPackage = 5.0;	        double giftWrapFee = giftWrap ? getGiftWrapFee(quantities, giftWrapFeePerUnit) : 0.0;
+        double shippingFeePerPackage = 5.0;	        
+	double giftWrapFee = giftWrap ? getGiftWrapFee(quantities, giftWrapFeePerUnit) : 0.0;
         double shippingFee = getShippingFee(quantities, itemsPerPackage, shippingFeePerPackage);
 
         double total = subtotal - discountAmount + giftWrapFee + shippingFee;
